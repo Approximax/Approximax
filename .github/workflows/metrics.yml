@@ -1,4 +1,4 @@
-name: Metrics
+name: Full-year calendar
 on:
   # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
@@ -17,3 +17,6 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOK }}
+          filename: metrics.plugin.isocalendar.fullyear.svg
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
